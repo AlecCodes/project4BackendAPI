@@ -4,5 +4,5 @@ from django.db import models
 class Run(models.Model):
     name = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
-    dur = models.IntegerField(default=0)
+    dur = models.IntegerField(default=None, blank = True, null = True)
     distance = models.IntegerField(default = None, blank = True, null = True)
